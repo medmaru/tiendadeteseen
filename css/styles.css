@@ -1,0 +1,809 @@
+/*************** ESTILOS GENERALES***************/
+body {
+    background-color: white;
+
+
+}
+
+/*ESTILOS PARA BOTONES*/
+
+.btn.btn-primary {
+    padding: 10px 20px;
+    background-color: #c7a17a;
+    border: none;
+    color: #181818;
+    cursor: pointer;
+    white-space: nowrap;
+    border-radius: 0;
+    /* Sin bordes redondeados */
+    outline: none;
+    
+}
+
+/* Estilos para cuando se pasa el mouse sobre el botón */
+.btn.btn-primary:hover {
+    background-color: #302e2e;
+}
+    
+  
+/* Evitar color azul en el enfoque del botón */
+.btn.btn-primary:focus,
+.btn.btn-primary:active {
+    background-color: #302e2e; /* Color gris cuando está presionado */
+    outline: none; /* Eliminar borde azul */
+    box-shadow: none; /* Eliminar cualquier sombra de enfoque */
+}
+
+
+
+/*ESTILOS PARA CONTENEDOR IMÁGENES*/
+.container-fluid {
+    padding: 0;
+}
+
+/* ESTILOS PARA EL HEADER**/
+
+header {
+    background-color: #181818;
+    padding: 10px 0;
+    margin: 0;
+    z-index: 9999;
+    /* Coloca el header por encima de otros elementos */
+}
+
+
+/* Estilos para el logo */
+.logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+
+/* Estilos para la navegación */
+.navbar-nav {
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff;
+    font-size: 0.8rem;
+    padding: 0 15px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #d3ad7f;
+}
+
+
+/* Estilos para el botón del menú hamburguesa */
+.navbar-toggler {
+    border: none;
+    /* Elimina el borde alrededor del botón */
+}
+
+
+.navbar-toggler:focus {
+    outline: none;
+    /* Elimina el borde de enfoque */
+    box-shadow: none;
+    /* Elimina el efecto de sombra que aparece al hacer clic */
+}
+
+/* Ocultar el enlace "Inicio" en pantallas grandes */
+.nav-inicio {
+    display: none;
+}
+
+
+/*************** ESTILOS PARA EL INDEX ***************/
+
+/* PRIMER CARRUSEL */
+
+#carouselExampleIndicators .carousel-item img {
+    width: 100%;
+    /* El ancho ocupa todo el contenedor */
+    height: 800px;
+    /* Altura fija para todas las imágenes */
+    object-fit: cover;
+    /* Asegura que la imagen cubra el área sin deformarse */
+}
+
+#carouselExampleIndicators .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    text-align: left;
+    padding-left: 10%;
+    width: 90%;
+    /* Ajusta el ancho para controlar el tamaño del bloque de texto */
+}
+
+#carouselExampleIndicators .carousel-caption h5,
+.carousel-caption p {
+    color: white;
+    /* Cambia este color según el fondo de la imagen */
+}
+
+#carouselExampleIndicators .btn-transparent {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Fondo blanco con transparencia */
+    border: 1px solid white;
+    /* Borde blanco */
+    border-radius: 0;
+    color: white;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#carouselExampleIndicators .btn-transparent:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Aumenta la opacidad al hacer hover */
+    color: black;
+    /* Cambia el texto a negro */
+}
+
+@media (max-width: 768px) {
+    #carouselExampleIndicators .carousel-caption h5 {
+        font-size: 1.5rem;
+    }
+
+    #carouselExampleIndicators .carousel-caption p {
+        font-size: 1rem;
+    }
+
+    #carouselExampleIndicators .carousel-item img {
+        height: 400px;
+    }
+}
+
+
+
+/*CARRUSEL PRODUCTOS*/
+#productCarousel .card {
+    position: relative;
+    width: 100%;
+    /* Ancho completo del contenedor */
+    padding-top: 200%;
+    /* Cambia este valor para ajustar la relación de aspecto, 75% = 4:3 */
+    margin-bottom: 20px;
+    /* Espacio inferior para evitar que las tarjetas se junten */
+    overflow: hidden;
+    /* Oculta cualquier contenido que sobresalga del contenedor */
+
+}
+
+#productCarousel h5 {
+    font-size: 1.2rem;
+    color: #d3ad7f;
+    text-align: center;
+}
+
+#productCarousel p {
+    text-align: center;
+}
+
+#productCarousel .card-img-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Ocupa toda la altura de la tarjeta */
+    object-fit: cover;
+    /* La imagen cubre todo el contenedor */
+    object-position: center;
+    /* Centra la imagen dentro del contenedor */
+    z-index: 1;
+    /* Asegura que la imagen esté detrás del contenido */
+}
+
+#productCarousel .card-body {
+    position: relative;
+    /* Para que el z-index funcione */
+    padding: 10px;
+    /* Espacio interior para el contenido de la tarjeta */
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Fondo blanco con algo de transparencia */
+    color: black;
+    /* Color del texto */
+    z-index: 2;
+    /* Asegura que el texto esté por encima de la imagen */
+}
+
+#productCarousel .carousel-control-prev,
+#productCarousel .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    /* Ajusta el tamaño de los controles */
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente */
+}
+
+#productCarousel .carousel-control-prev {
+    left: -60px;
+    /* Ajusta esta distancia para posicionar fuera del carrusel */
+}
+
+#productCarousel .carousel-control-next {
+    right: -60px;
+    /* Ajusta esta distancia para posicionar fuera del carrusel */
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+
+    #productCarousel .carousel-control-prev,
+    #productCarousel .carousel-control-next {
+        width: 15px;
+        /* Ajusta el tamaño del área del control */
+        height: 15px;
+        /* Ajusta el tamaño del ícono */
+    }
+
+    #productCarousel .carousel-control-prev-icon,
+    #productCarousel .carousel-control-next-icon {
+        background-size: 20px;
+        /* Cambia el tamaño del ícono para que sea visible */
+
+    }
+}
+
+#productCarousel .carousel-control-prev,
+#productCarousel .carousel-control-next {
+    z-index: 10;
+}
+
+#productCarousel .carousel-control-prev {
+    left: -15px;
+}
+
+#productCarousel .carousel-control-next {
+    right: -15px;
+}
+
+#productCarousel h5 {
+    font-size: 1rem;
+ }
+
+ #productCarousel p {
+    font-size: 0.7rem;
+ }
+
+/*ESTILOS PARA ¿CUÁL VAS A ELEGIR HOY?**/
+
+.seccion-te h4 {
+    font-size: 1.5rem;
+    color: #d3ad7f;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.seccion-te h5 {
+    font-size: 1.2rem;
+    color: #d3ad7f;
+    text-align: center;
+}
+
+.seccion-te .text-left h4 {
+    text-align: right;
+}
+
+.seccion-te .text-right h4 {
+    text-align: left;
+}
+
+.seccion-te .text-left p {
+    text-align: right;
+}
+
+.seccion-te .text-right p {
+    text-align: left;
+}
+
+.seccion-te p {
+    font-size: 1rem;
+    color: #555555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+/*iMAGENES HOVER*/
+.position-relative:hover img {
+    transform: scale(1.05);
+    /* Aumenta el tamaño de la imagen al pasar el mouse */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Fondo oscuro con opacidad */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    /* Comienza como invisible */
+    transition: opacity 0.3s;
+    /* Transición suave */
+}
+
+.position-relative:hover .overlay {
+    opacity: 1;
+    /* Muestra la superposición al pasar el mouse */
+}
+
+
+/*IMAGEN FINAL FONDO**/
+
+/* Sección con imagen de fondo */
+.bg-image-section {
+    background-image: url("../img/interiorByN.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Fondo semitransparente para mejorar la legibilidad del texto */
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente negro */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    /*  max-width: 80%; /* Ajusta el ancho del contenedor */
+}
+
+
+
+
+
+
+
+
+/* Tienda */
+
+/* Tienda */
+
+.tienda .position-relative {
+    position: relative;
+    overflow: hidden;
+    /* Asegura que nada sobresalga del contenedor */
+}
+
+.tienda img {
+    width: 100%;
+    /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: auto;
+    /* Mantiene la relación de aspecto de la imagen */
+}
+
+.tienda .overlay {
+    position: absolute;
+    /* Posiciona el overlay sobre la imagen */
+    top: 0;
+    /* Asegura que inicie en la parte superior */
+    left: 0;
+    /* Asegura que inicie en la parte izquierda */
+    right: 0;
+    /* Asegura que se extienda completamente a la derecha */
+    bottom: 0;
+    /* Asegura que se extienda completamente hacia abajo */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Fondo oscuro con opacidad */
+    color: white;
+    /* Color del texto */
+    display: flex;
+    /* Usar flexbox para centrar el texto */
+    align-items: center;
+    /* Centrar verticalmente */
+    justify-content: center;
+    /* Centrar horizontalmente */
+    padding: 20px;
+    /* Añadir espacio interno */
+    opacity: 0;
+    /* Comienza como invisible */
+    transition: opacity 0.3s;
+    /* Transición suave */
+    text-align: center;
+    /* Centrar el texto */
+}
+
+.tienda .position-relative:hover .overlay {
+    opacity: 1;
+    /* Mostrar la superposición al pasar el mouse */
+}
+
+.tienda .text {
+    font-size: 1em;
+    /* Tamaño de fuente adaptable */
+    line-height: 1.4;
+    /* Espaciado entre líneas */
+    overflow: hidden;
+    /* Ocultar el desbordamiento */
+    max-height: 100%;
+    /* Asegurar que el texto no se extienda fuera del contenedor */
+}
+
+
+/*TIENDA MENÚ*/
+
+.bg-image-section-new {
+    background-image: url('../img/tea-557436_1280.jpg'); 
+    background-size: cover; /* Cubre todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    height: 800px; /* Altura fija */
+    position: relative; /* Para el posicionamiento del overlay */
+    color: white; /* Color del texto */
+    margin-bottom: 12px;
+}
+
+/* Estilo para aumentar tamaño de las imágenes al pasar el mouse */
+.menu-tienda .hover-image {
+    transition: transform 0.3s ease; /* Transición suave para el efecto */
+}
+
+.menu-tienda .hover-image:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al 110% */
+}
+
+
+.menu-tienda .image-container {
+    overflow: hidden; /* Oculta cualquier parte de la imagen que se salga del contenedor */
+    position: relative; /* Asegura que el efecto de zoom sea relativo al contenedor */
+}
+
+.menu-tienda .overlay-new {   
+    position: absolute; /* Posiciona el texto sobre la imagen */
+    top: 50%; /* Centrado vertical */
+    left: 50%; /* Centrado horizontal */
+    transform: translate(-50%, -50%); /* Ajusta la posición al centro */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+.menu-tienda .overlay-new h5 {
+    font-size: 2.5rem; /* Tamaño del título */
+}
+
+.menu-tienda .carousel-caption {
+    position: absolute;
+   top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    text-align: left;
+    padding-left: 10%;
+    width: 90%;
+    /* Ajusta el ancho para controlar el tamaño del bloque de texto */
+}
+
+
+.menu-tienda .overlay-new p {
+    font-size: 1.2rem; /* Tamaño del texto */
+}
+
+.menu-tienda .overlay-new .btn {
+    margin-top: 20px; /* Espaciado superior para el botón */
+}
+
+
+/*************** ESTILOS PARA EL FOOTER**************************/
+
+.footer-container {
+    background-color: #181818;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer-logo {
+    max-width: 250px;
+    margin-bottom: 20px;
+}
+
+.main-footer h5 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #d3ad7f;
+}
+
+.main-footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.main-footer ul li {
+    margin-bottom: 10px;
+}
+
+.main-footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    /* Centra el formulario horizontalmente */
+    align-items: center;
+    /* Alinea verticalmente los elementos */
+    padding-bottom: 20px;
+}
+
+/* Estilos para el campo de email */
+.newsletter-form input[type="email"] {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #302e2e;
+    /* Bordes visibles */
+    background-color: transparent;
+    color: #ccc;
+    /* Color de texto claro */
+    outline: none;
+    border-radius: 0;
+    /* Sin bordes redondeados */
+}
+
+/* Estilos para cuando el campo está enfocado */
+.newsletter-form input[type="email"]:focus {
+    outline: none;
+    /* Elimina el borde azul */
+    box-shadow: none;
+    /* Elimina cualquier sombra de enfoque */
+}
+
+.newsletter-form input[type="email"]::placeholder {
+    color: white;
+    /* Cambia el color del texto del placeholder a blanco */
+    opacity: 0.7;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icon {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.copyrights-wrapper {
+    padding: 20px 0;
+    font-size: 0.7rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 990px) {
+
+    /* Mostrar el enlace "Inicio" solo en pantallas pequeñas */
+    .nav-inicio {
+        display: block;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-brand {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        border-bottom: 1px solid #e5e5e5;
+        /* Línea divisoria entre opciones */
+    }
+
+    .navbar-nav .nav-link {
+        color: #333;
+        /* Color del texto */
+        padding: 15px 0;
+        /* Espaciado de cada opción */
+        text-align: left;
+        /* Alinea el texto a la izquierda */
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: #d3ad7f;
+        /* Color del texto al hacer hover */
+    }
+
+    .woodmart-burger-icon {
+        display: flex;
+        align-items: center;
+        border: none;
+    }
+
+    .woodmart-burger {
+        display: inline-block;
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        position: relative;
+    }
+
+    .woodmart-burger::before,
+    .woodmart-burger::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        left: 0;
+    }
+
+    .woodmart-burger::before {
+        top: -10px;
+    }
+
+    .woodmart-burger::after {
+        bottom: -10px;
+    }
+
+
+    /* Estilos para el menú que aparece desde la izquierda */
+    .navbar-collapse {
+        background-color: #ffffff;
+        /* Fondo blanco */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 100%;
+        padding: 20px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .navbar-collapse.show {
+        transform: translateX(0);
+    }
+}
+
+
+
+
+/*********** ESTILOS PARA CONTACTO*******************/
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    border-radius: 0;
+}
+
+/* Estilo para los enlaces en la lista de contacto */
+.contact-info__list a {
+    color: inherit;
+    /* Esto hará que el enlace tome el color del texto padre */
+    text-decoration: none;
+    /* Esto elimina el subrayado de los enlaces */
+}
+
+.contact-info__list a:hover {
+    text-decoration: underline;
+    /* Opcional: subrayar al pasar el ratón */
+}
+
+@media (min-width: 1024px) {
+    .contact-info__wrapper {
+        border-radius: 0 .625rem .625rem 0;
+        padding: 5rem !important
+    }
+}
+
+.contact-info__list span.position-absolute {
+    left: 0
+}
+
+.z-index-101 {
+    z-index: 101;
+}
+
+.list-style--none {
+    list-style: none;
+}
+
+.contact__wrapper {
+    background-color: #fff;
+    border-radius: 0 0 .625rem .625rem
+}
+
+@media (min-width: 1024px) {
+    .contact__wrapper {
+        border-radius: .625rem 0 .625rem .625rem
+    }
+}
+
+@media (min-width: 1024px) {
+    .contact-form__wrapper {
+        padding: 5rem !important
+    }
+}
+
+.shadow-lg,
+.shadow-lg--on-hover:hover {
+    box-shadow: 0 1rem 3rem rgba(132, 138, 163, 0.1) !important;
+}
+
+
+/*********** ESTILOS PARA FRANQUICIAS*******************/
+.contact__wrapper h5 {
+    font-size: 1.2rem;
+    color: #d3ad7f;
+    text-align: center;
+
+}
+
+.contact__wrapper h3 {
+    text-align: center;
+
+}
+
+
+/*
+@media (min-width: 576px) {
+    
+}
+
+@media (min-width: 768px) {
+   
+}
+
+@media (min-width: 992px) {
+   
+}
+
+@media (min-width: 1200px) {
+   
+}*/
+
+
+
+@media (max-width: 576px) {
+    .tienda .text {
+        font-size: 0.8em;
+        /* Disminuir el tamaño de fuente en pantallas pequeñas */
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .tienda .text {
+        font-size: 0.9em;
+        /* Ajustar el tamaño de fuente para pantallas medianas */
+    }
+}
+
+@media (min-width: 768px) {
+    .tienda .text {
+        font-size: 1em;
+        /* Aumentar el tamaño de fuente en pantallas grandes */
+    }
+}
