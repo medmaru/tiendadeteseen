@@ -5,10 +5,11 @@ Este repositorio contiene el código para el sitio web de "Tienda de Té", que o
 ## Capturas de Pantalla
 
 ### Página Principal pantallas grandes
-![Captura de pantalla de la página principal](img/captura-pagina-principal.png)
+![Captura de pantalla de la página principal](img/Capturas/cap01.png)
+
 
 ### Página Principal pantallas pequeñas
-![Captura de pantalla de la página principal](img/captura-pagina-principal.png)
+![Captura de pantalla de la página principal](img/Capturas/cap02.png)
 
 ## Estructura del Proyecto
 
