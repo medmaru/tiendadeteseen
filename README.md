@@ -39,4 +39,4 @@ Este repositorio contiene el código para el sitio web de "Tienda de Té", que o
 
 ### Autores
 
-Este sitio fue desarrollado por **Grupo Seen** Emiliano Celleri, Joana Coll, Ana Sol Nuñez, María Eugenia Descalzo, utilizando HTML, CSS y JavaScript con un enfoque en diseño responsive y una experiencia de usuario enriquecida.
+Este sitio fue desarrollado por **Grupo Seen** //Emiliano Celleri, Joana Coll, Ana Sol Nuñez, María Eugenia Descalzo// utilizando HTML, CSS y JavaScript con un enfoque en diseño responsive y una experiencia de usuario enriquecida.
